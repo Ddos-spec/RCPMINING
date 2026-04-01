@@ -91,7 +91,7 @@ if page == "📊 Dashboard Manajemen":
                 fig_prod = go.Figure()
                 fig_prod.add_trace(go.Bar(x=ore_daily['date'], y=ore_daily['actual'], name='Actual', marker_color='#1f77b4'))
                 fig_prod.add_trace(go.Scatter(x=ore_daily['date'], y=ore_daily['plan'], name='Plan', mode='lines', line=dict(color='#d62728', width=2)))
-                fig_prod.update_layout(margin=dict(l=0, r=0, t=30, b=0), legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
+                fig_prod.update_layout(margin=dict(l=0, r=0, t=30, b=0), legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0))
                 st.plotly_chart(fig_prod, use_container_width=True)
             else:
                 st.info("Tidak ada data Ore di periode ini.")
